@@ -1,4 +1,4 @@
-# Senior Engineer Review
+# Senior Engineer Review Agent Skill
 
 A strict, advisory-only senior-engineer review skill that gives a final
 production-grade gate on merge readiness — severity-ranked findings, explicit
