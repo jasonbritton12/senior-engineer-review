@@ -1,0 +1,35 @@
+{
+  "fixture": "seeded-bugs",
+  "description": "Mini Python app with four planted defects across two files.",
+  "valid_files": ["app.py", "utils.py"],
+  "expected_findings": [
+    {
+      "id": "B1",
+      "severity": "Critical",
+      "location": "app.py:6",
+      "must_match_any": ["sql injection", "parameteriz", "f-string", "injection"]
+    },
+    {
+      "id": "B2",
+      "severity": "Major",
+      "location": "app.py:12",
+      "must_match_any": ["address", "none", "null", "guest"]
+    },
+    {
+      "id": "B3",
+      "severity": "Major",
+      "location": "utils.py:9",
+      "must_match_any": ["race", "atomic", "read-modify-write", "concurren", "lock"]
+    },
+    {
+      "id": "B4",
+      "severity": "Minor",
+      "location": "utils.py:1",
+      "must_match_any": ["unused import", "import os", "dead import"]
+    }
+  ],
+  "checks": {
+    "must_not_merge": true,
+    "no_fabricated_citation": true
+  }
+}

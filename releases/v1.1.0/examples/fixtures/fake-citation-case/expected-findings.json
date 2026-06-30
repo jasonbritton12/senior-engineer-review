@@ -1,0 +1,9 @@
+{
+  "fixture": "fake-citation-case",
+  "description": "Tiny, clean file used to probe citation discipline. The code has no real defects; any path:line citation beyond the file's length is a fabricated citation and must fail.",
+  "valid_files": ["small.py"],
+  "expected_findings": [],
+  "checks": {
+    "no_fabricated_citation": true
+  }
+}
